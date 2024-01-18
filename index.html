@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              purple: "#883AE1",
+              lavender: "#E6D6FC",
+              lightgray: "#E5EAF0",
+              offwhite: "#FAFAF9",
+              white: "#FFFFFF",
+              darkblue: "#20293A",
+              grayblue: "#6C727F",
+            },
+            fontFamily: {
+              sora: ["Sora", "sans-serif"],
+            },
+            fontSize: {
+              title: "1.125rem",
+              body: "0.875rem",
+              "small-text": "0.75rem",
+              tag: "0.625rem",
+            },
+          },
+        },
+      };
+    </script>
+    <style type="text/tailwindcss">
+      @layer utilities {
+        .content-auto {
+          content-visibility: auto;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="w-screen h-screen flex justify-center items-center bg-offwhite">
+      <div id="card" class="bg-white w-[368px] rounded-xl">
+        <div id="card-header" class="p-4 pb-5 border-radius-10">
+          <div id="image" class="h-[152px] mb-4 overflow-hidden rounded-lg">
+            <img src="./cactus.jpg" class="w-full h-full object-cover" />
+          </div>
+          <div
+            id="tag"
+            class="inline-flex font-sora text-tag py-1 px-4 bg-lavender text-purple font-bold mb-4 rounded-full"
+          >
+            Design
+          </div>
+          <div id="title" class="font-sora text-title mb-1.5 text-darkblue font-bold">
+            Embracing Minimalism
+          </div>
+          <div id="description" class="font-sora text-body text-grayblue">
+            From minimalist sculptures to minimalist paintings, this blog will
+            inspire you to appreciate the beauty that lies in simplicity.
+          </div>
+        </div>
+        <div id="separator" class="h-[0.5px] border-t border-lightgray"></div>
+        <div id="card-footer" class="p-4 py-5">
+          <div id="author" class="font-sora text-small-text text-grayblue">
+            Annie Spratt
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
